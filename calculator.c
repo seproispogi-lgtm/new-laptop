@@ -17,7 +17,7 @@ int main(){
                         "6. Square root\n"
                         "7. Exit\n";
         
-        printf(pili);
+        printf("%s", pili);
         printf("Choose your operation: ");
         scanf("%d", &choice);
 
@@ -27,9 +27,10 @@ int main(){
         }
 
         else if(choice == 6){
-            printf("Enter your Number: ");
-            scanf("%.2f",&num);
-            printf("%.2f", sqrt(num));
+            printf("Enter your Number: \n");
+            scanf("%f", &num);
+
+            printf("Result: %.2f\n", sqrt(num));
         }
         else if (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5){
             printf("Enter your first number: \n");
@@ -37,29 +38,27 @@ int main(){
             printf("Enter your second number: \n");
             scanf("%.2f", &num2);
 
-            if (choice == 1){printf("%.2f", num1+num2);}
-            else if(choice == 2){printf("%.2f", num1-num2);}
-            else if(choice == 3){printf("%.2f", num1*num2);}
-            else if(choice == 4){printf("%.2f", num1/num2);}
+            if (choice == 1){printf("%.2f", num1 + num2);}
+            else if(choice == 2){printf("%.2f", num1 - num2);}
+            else if(choice == 3){printf("%.2f", num1 * num2);}
+            else if(choice == 4){printf("%.2f", num1 / num2);}
             else if(choice == 5){float result = pow(num1, num2); printf("%.2f", result);}
 
             else {
             printf("Invalid input! Select Another\n");
         }
 
-        char again = toupper(again);
-        printf("Want to Continue[Y/N]: \n");
-        scanf("%c", toupper(&again));
-        
+        char again;
+        printf("Want to Continue[Y/N]: ");
+        scanf(" %c", &again);
+        again = toupper(again);
+
         if (again != 'Y'){
             printf("Comeagain");
             break;
         }
-
-
-
     }
-
+    printf("\n");
     return 0;
 }
 
