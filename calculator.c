@@ -49,7 +49,8 @@ int main(){
                 printf("%.2f", num1/num2);
             
             case 5:
-                printf("%.2f", num1**num2);
+                float result = pow(num1, num2); 
+                printf("%.2f", result);
     }
 
         }
