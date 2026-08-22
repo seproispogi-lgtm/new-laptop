@@ -1,4 +1,4 @@
-
-name = 'sef'
 print("hello git!!")
-print(f"What is your name: {name}")
+
+name = input("name: ").split()
+print(name)
