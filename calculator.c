@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include <ctype.h>
 int main(){
 
     while (true) {
@@ -30,31 +31,35 @@ int main(){
             scanf("%.2f",num);
             prinf("%.2f", sqrt(num));
         }
-        switch (choice == 1 || 2 || 3 || 4 || 5){
+        else if (choice == 1 || 2 || 3 || 4 || 5){
             printf("Enter your first number: ");
             scanf("%.2f", num1);
             printf("Enter your second number: ");
             scanf("%.2f", num2);
 
-            case 1:
-                printf("%.2f", num1+num2);
-            
-            case 2:
-                printf("%.2f", num1-num2);
-            
-            case 3:
-                printf("%.2f", num1*num2);
-            
-            case 4:
-                printf("%.2f", num1/num2);
-            
-            case 5:
-                float result = pow(num1, num2); 
-                printf("%.2f", result);
-    }
-
+            if (choice == 1){printf("%.2f", num1+num2);}
+            else if(choice == 2){printf("%.2f", num1-num2);}
+            else if(choice == 3){printf("%.2f", num1*num2);}
+            else if(choice == 4){printf("%.2f", num1/num2);}
+            else if(choice == 5){float result = pow(num1, num2); printf("%.2f", result);}
+        else;
+        prinf("Invalid input! Select Another");
+        
+        char again;
+        printf("Want to Continue[Y/N]: ");
+        scanf("%c", toupper(again));
+        
+        if (again != "Y"){
+            printf("Comeagain");
+            break;
         }
 
+
+
+    }
+
     return 0;
+}
+
 }
 
