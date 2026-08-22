@@ -33,16 +33,16 @@ int main(){
             printf("Result: %.2f\n", sqrt(num));
         }
         else if (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5){
-            printf("Enter your first number: \n");
-            scanf("%.2f", &num1);   
-            printf("Enter your second number: \n");
-            scanf("%.2f", &num2);
+            printf("Enter your first number: ");
+            scanf("%f", &num1);   
+            printf("Enter your second number: ");
+            scanf("%f", &num2);
 
-            if (choice == 1){printf("%.2f", num1 + num2);}
-            else if(choice == 2){printf("%.2f", num1 - num2);}
-            else if(choice == 3){printf("%.2f", num1 * num2);}
-            else if(choice == 4){printf("%.2f", num1 / num2);}
-            else if(choice == 5){float result = pow(num1, num2); printf("%.2f", result);}
+            if (choice == 1){printf("Result: %.2f\n", num1 + num2);}
+            else if(choice == 2){printf("Result: %.2f\n", num1 - num2);}
+            else if(choice == 3){printf("Result: %.2f\n", num1 * num2);}
+            else if(choice == 4){printf("Result: %.2f\n", num1 / num2);}
+            else if(choice == 5){float result = pow(num1, num2); printf("Result: %.2f\n", result);}
 
             else {
             printf("Invalid input! Select Another\n");
@@ -54,7 +54,7 @@ int main(){
         again = toupper(again);
 
         if (again != 'Y'){
-            printf("Comeagain");
+            printf("Come Again!");
             break;
         }
     }
