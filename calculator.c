@@ -29,7 +29,7 @@ int main(){
         else if(choice == 6){
             printf("Enter your Number: ");
             scanf("%.2f",num);
-            prinf("%.2f", sqrt(num));
+            printf("%.2f", sqrt(num));
         }
         else if (choice == 1 || 2 || 3 || 4 || 5){
             printf("Enter your first number: ");
@@ -49,7 +49,7 @@ int main(){
         printf("Want to Continue[Y/N]: ");
         scanf("%c", toupper(again));
         
-        if (again != "Y"){
+        if (again != 'Y'){
             printf("Comeagain");
             break;
         }
