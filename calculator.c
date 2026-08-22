@@ -43,7 +43,7 @@ int main(){
             else if(choice == 4){printf("%.2f", num1/num2);}
             else if(choice == 5){float result = pow(num1, num2); printf("%.2f", result);}
         else;
-        prinf("Invalid input! Select Another");
+        printf("Invalid input! Select Another");
         
         char again;
         printf("Want to Continue[Y/N]: ");
