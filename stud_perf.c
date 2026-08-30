@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
+#include <string.h>
 
 int main(){
     int studentCount, currentStudent, score, totalScore, highScore, lowScore,
         aveScore, passCount, failCount;
     char category[70];
+        
         printf("Enter Number of Students: ");
         scanf("%d", &studentCount);
             while (studentCount < 0){
@@ -19,7 +21,8 @@ int main(){
                 lowScore = 0;
                 passCount = 0;
                 failCount = 0;
-                for(currentStudent = 1; currentStudent = studentCount; currentStudent++ ) {
+        
+        for(currentStudent = 0; currentStudent < studentCount; currentStudent++ ) {
                     printf("Enter the SCORE of the Student: ");
                     scanf("%d", &score);
                         while(score<0 && score > 100){
@@ -28,9 +31,17 @@ int main(){
                             printf("Enter the SCORE of the Student: ");
                             scanf("%d", &score);
                         }
-                        if(currentStudent = studentCount){
-                            break;
-                        }
+                    if(score >= 90){strcpy("EXCELLENT", category);}
+                    else if(score >= 80){strcpy("VERY GOOD", category);}
+                    else if(score >= 75){strcpy("GOOD", category);}
+                    else if(score >= 60){strcpy("NEEDS IMPROVEMENT", category);}
+                                    else{strcpy("FAIL", category);}
+                    printf("Student %d\nCategory: %s ", currentStudent, category);
+            totalScore = score + totalScore;
+            if(currentStudent = 1){score = highScore; score = lowScore;}
+            else{if(score > highScore){highScore = score;} 
+                if(score < lowScore){lowScore=score;}}
+            if(score>=60){passCount++;}
+            else{failCount++;}
     }
-}
-
+}       
