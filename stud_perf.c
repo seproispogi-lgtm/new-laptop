@@ -10,7 +10,7 @@ int main(){
         
         printf("Enter Number of Students: ");
         scanf("%d", &studentCount);
-            while (studentCount < 0){
+            while (studentCount <= 0){
                 printf("Invalid Input: Number should be greater than ZERO.\n"); 
                 printf("input valid number.\n");
                 printf("Enter Number of Students: ");
@@ -36,19 +36,21 @@ int main(){
                             else if(score >= 75){strcpy(category, "GOOD");}
                             else if(score >= 60){strcpy(category, "NEEDS IMPROVEMENT");}
                             else{strcpy(category, "FAIL");}
-                                printf("Student %d\nCategory: %s ", currentStudent);
+                                printf("Student %d\nCategory: %s\n", currentStudent + 1, category);
                         totalScore = score + totalScore;
-                        if(currentStudent = 1){score = highScore; score = lowScore;}
+                        if(currentStudent == 0){highScore = score; lowScore = score;}
                         else{if(score > highScore){highScore = score;} if(score < lowScore){lowScore=score;}}
                         if(score>=60){passCount++;} else{failCount++;}
+
+
                     }
         aveScore = totalScore / studentCount;
-
-        printf("Highes Score: %d", highScore);
-        printf("Lowest Score: %d", lowScore);
-        printf("Total Score: %d", totalScore);
-        printf("Average Score: %d", aveScore);
-        printf("Passing Students: %d", passCount);
-        printf("Failing Students: %d", failCount);
+        printf("\n===== RESULTS =====\n");
+        printf("Highes Score: %d\n", highScore);
+        printf("Lowest Score: %d\n", lowScore);
+        printf("Total Score: %d\n", totalScore);
+        printf("Average Score: %d\n", aveScore);
+        printf("Passing Students: %d\n", passCount);
+        printf("Failing Students: %d\n", failCount);
 
 }
