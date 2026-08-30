@@ -43,5 +43,15 @@ int main(){
                 if(score < lowScore){lowScore=score;}}
             if(score>=60){passCount++;}
             else{failCount++;}
+
+            aveScore = totalScore / studentCount;
+
+            print("Highes Score: %d", highScore);
+            print("Lowest Score: %d", lowScore);
+            print("Total Score: %d", totalScore);
+            print("Average Score: %d", aveScore);
+            print("Passing Students: %d", passCount);
+            print("Failing Students: %d", failCount);
+
     }
 }       
