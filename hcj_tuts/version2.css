@@ -1,109 +1,395 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  margin: auto;
-  width: 50%;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1100px;
   padding: 10px;
+  overflow-x: hidden;
+} /* ========================= HEADER ========================= */
+header {
+  width: 100%;
 }
-
+.logo {
+  width: 120px;
+  display: block;
+  margin-top: 10px;
+}
+.home {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  margin-top: -35px;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home a {
+  text-decoration: none;
+  color: black;
+}
+.home a:hover {
+  background-color: #542fe829;
+  color: #1b0951;
+} /* ========================= MAIN TITLE ========================= */
 .black-t {
-  display: flex;
+  display: block;
   text-align: center;
-  justify-content: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 75px;
-
-  color: rgb(69, 67, 67);
-  line-height: 70px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 100px;
+  color: rgba(56, 52, 62, 0.923);
+  line-height: 100px;
 }
-
 .blue-t {
-  display: flex;
+  display: block;
   text-align: center;
-  justify-content: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 75px;
-
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 105px;
   color: rgb(76, 134, 185);
-  line-height: 70px;
-}
+  line-height: 100px;
+} /* ========================= GENERAL TEXT ========================= */
 h2 {
   color: #b3851b;
   font-weight: bolder;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: xx-large;
 }
-
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.77);
 }
-
 p {
   text-align: left;
-  margin-inline: inherit;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(91, 90, 90);
+  color: rgb(24, 24, 24);
+  line-height: 30px;
+  font-size: 18px;
 }
-
 a:link {
   color: rgb(38, 224, 84);
 }
-
 a:visited {
   color: rgba(42, 165, 69, 0.471);
 }
-
 a:hover {
   color: rgb(230, 2, 2);
-}
-
-a:after {
-  color: blueviolet;
 }
 li {
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(91, 90, 90);
-}
-
+} /* ========================= FIRST IMAGE ========================= */
 .image1 {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} /* ========================= WHAT IS BOULDERING TEXT LEFT / IMAGE RIGHT ========================= */
+.container {
+  display: block;
+  align-items: left;
+  gap: 40px;
   width: 100%;
 }
-
+.container h2 {
+  font-size: 50px;
+}
+.container p {
+  width: 50%;
+  font-size: 18px;
+}
 .image2 {
-  max-width: fit-content;
+  width: auto;
   height: auto;
-  size: 30px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.logo {
-  width: 13%;
   display: block;
-  margin-right: 10%;
-}
-
-.reserve {
-  text-align: center;
-  background-color: rgb(40, 40, 101);
-  border: 3px;
-  border-color: rgb(3, 3, 54);
-  border-style: solid;
-  padding: 30px;
-  color: #d7d7d7;
-}
-
+  margin-left: auto;
+  margin-top: -350px;
+} /* ========================= BLUE DESCRIPTION BOX ========================= */
 .sub {
-  padding: 30px;
-  background-color: rgba(54, 54, 188, 0.845);
-  border: 2px;
-  border-color: #1b0951;
-  border-style: solid;
+  padding: 25px 20px;
+  background-color: rgba(41, 113, 124, 0.751);
+  border: 3px solid #1b0951;
   color: white;
   text-align: center;
+  margin-top: 40px;
+} /* ========================= WHY BOULDERING IMAGE LEFT / TEXT RIGHT ========================= */
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  margin: 50px 0;
+}
+.right h2 {
+  width: 100%;
+  text-align: right;
+  color: rgb(51, 96, 156);
+  font-size: 45px;
+  margin-right: 160px;
+  line-height: 90px;
+}
+.right p {
+  width: calc(60% - 20px);
+  order: 2;
+  margin-top: -780px;
+  margin-left: 550px;
+  font-size: 20px;
+  line-height: 40px;
+}
+.image3 {
+  width: auto;
+  height: auto;
+  display: block;
+  order: 1;
+  margin-top: -129px;
+}
+.right h3 {
+  width: calc(60% - 20px);
+  order: 4;
+  text-align: right;
+  justify-content: right;
+  margin-left: 200px;
+  margin-top: -600px;
+  font-size: 25px;
+  line-height: 90px;
+}
+.right ul {
+  width: calc(60% - 20px);
+  order: 3;
+  text-align: left;
+  justify-content: right;
+  margin-left: 620px;
+  margin-top: -330px;
+  padding-left: 0;
+  font-size: 20px;
+  line-height: 30px;
+  .right li {
+    text-align: right;
+    justify-content: right;
+    margin-left: 780px;
+  }
+}
+
+/* =========================
+   GETTING STARTED SECTION
+========================= */
+
+.box {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.box h2 {
+  text-align: left;
+
+  font-size: 35px;
+  color: #202852;
+
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* =========================
+   GETTING STARTED
+   IMAGE + TEXT
+========================= */
+
+.bokbok {
+  position: relative;
+
+  width: 48%;
+  height: 300px;
+
+  margin-top: 30px;
+}
+
+.image4 {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  border: 5px solid #6675c9;
+}
+
+.bokbok h2 {
+  position: absolute;
+
+  top: 35px;
+  left: 35px;
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.bokbok p {
+  position: absolute;
+
+  top: 85px;
+  left: 35px;
+  right: 35px;
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RIGHT SIDE GETTING STARTED
+========================= */
+
+.rayt {
+  width: 48%;
+
+  margin-left: 52%;
+  margin-top: -300px;
+
+  min-height: 300px;
+}
+
+.rayt h2 {
+  color: #202820;
+
+  text-align: left;
+
+  font-size: 28px;
+
+  margin: 0 0 15px;
+}
+
+.rayt ul {
+  margin: 0;
+  padding-left: 25px;
+
+  text-align: left;
+
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* =========================
+   BOTTOM LARGE IMAGE
+========================= */
+
+.image5 {
+  width: 100%;
+  height: 305px;
+
+  object-fit: cover;
+
+  display: block;
+
+  margin-top: 45px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.reserve {
+  width: 100%;
+
+  text-align: center;
+
+  background-color: #117f99;
+  border: 3px solid #07546a;
+
+  padding: 30px;
+
+  color: white;
+
+  margin-top: 45px;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .black-t,
+  .blue-t {
+    font-size: 65px;
+  }
+
+  .container,
+  .right {
+    gap: 25px;
+  }
+
+  .container p,
+  .image2,
+  .image3,
+  .right > div {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    width: 94%;
+  }
+
+  header {
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .home {
+    margin: 0;
+  }
+
+  .black-t,
+  .blue-t {
+    font-size: 48px;
+  }
+
+  .container,
+  .right {
+    display: block;
+  }
+
+  .container p,
+  .image2,
+  .image3,
+  .right > div {
+    width: 100%;
+  }
+
+  .image2,
+  .image3 {
+    margin-top: 25px;
+  }
+
+  .bokbok {
+    width: 100%;
+  }
+
+  .rayt {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+
+  .image5 {
+    height: 220px;
+  }
 }
